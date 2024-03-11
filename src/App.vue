@@ -1,5 +1,8 @@
 <template>
-  <div>{{greating}} {{name}} {{message}}</div>
+<div>
+  <div>{{greating}} {{message}}</div>
+  <div> {{name}} </div>
+  </div>
 </template>
 
 <script>
