@@ -3,6 +3,8 @@
   <div>{{greating}} {{message}}</div>
   <div> {{name}} </div>
   <div v-text="name"></div>
+  <div v-html="type"></div>
+  <div v-html="hack"></div>
   </div>
 </template>
 
@@ -15,7 +17,8 @@ export default {
       greating:"Hello",
       name:"Maria",
       message:" you are looking so beautifull",
-      type:"paragraph type is text"
+      type:"<b>paragraph type is text</b>",
+      hack: `<a href="#" onclick="alert('you have click')">Visit W3Schools</a>`,
     }
   }
   
