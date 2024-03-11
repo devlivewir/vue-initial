@@ -1,5 +1,5 @@
 <template>
-  <div>Hello {{name}}</div>
+  <div>{{greating}} {{name}} {{message}}</div>
 </template>
 
 <script>
@@ -8,7 +8,9 @@ export default {
   name: 'App',
   data(){
     return{
-      name:"Maria"
+      greating:"Hello",
+      name:"Maria",
+      message:" you are looking so beautifull"
     }
   }
   
