@@ -2,6 +2,7 @@
 <div>
   <div>{{greating}} {{message}}</div>
   <div> {{name}} </div>
+  <div v-text="name"></div>
   </div>
 </template>
 
@@ -13,7 +14,8 @@ export default {
     return{
       greating:"Hello",
       name:"Maria",
-      message:" you are looking so beautifull"
+      message:" you are looking so beautifull",
+      type:"paragraph type is text"
     }
   }
   
