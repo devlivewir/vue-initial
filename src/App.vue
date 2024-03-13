@@ -20,7 +20,7 @@ export default {
       message:" you are looking so beautifull",
       type:"<b>paragraph type is text</b>",
       headingId: 'heading',
-      isDisabled: true,
+      isDisabled: false,
     }
   }
   
