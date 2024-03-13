@@ -5,6 +5,7 @@
   <div v-text="name"></div>
   <div v-html="type"></div>
   <h2 v-bind:id="headingId">Heading</h2>
+  <button v-bind:disabled="isDisabled">Bind</button>
   </div>
 </template>
 
@@ -19,6 +20,7 @@ export default {
       message:" you are looking so beautifull",
       type:"<b>paragraph type is text</b>",
       headingId: 'heading',
+      isDisabled: true,
     }
   }
   
