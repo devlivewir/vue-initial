@@ -4,7 +4,7 @@
   <div> {{name}} </div>
   <div v-text="name"></div>
   <div v-html="type"></div>
-  <div v-html="hack"></div>
+  <h2 v-bind:id="headingId">Heading</h2>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
       name:"Maria",
       message:" you are looking so beautifull",
       type:"<b>paragraph type is text</b>",
-      hack: `<a href="#" onclick="alert('you have click')">Visit W3Schools</a>`,
+      headingId: 'heading',
     }
   }
   
