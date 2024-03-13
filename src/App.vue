@@ -11,6 +11,11 @@
   <h2 v-bind="isPromoted && 'promoted'">Promoted Movie</h2>
   <h2 v-bind="iaSold ? 'sold-out':'new'">SoldOut? Movie</h2>
   <h2 v-bind="[isPromoted && 'promoted' iaSold ? 'sold-out':'new']">SoldOut? Movie</h2>
+  <h2 v-bind:class="{
+  promoted: isPromoted,
+  new: !isSold,
+  'sold-out':isSold
+  }">object key value pairs</h2>
   </div>
 </template>
 
