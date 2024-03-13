@@ -9,6 +9,8 @@
   <h2 class="underline">under line Text</h2>
   <h2 v-bind="status">Status</h2>
   <h2 v-bind="isPromoted && 'promoted'">Promoted Movie</h2>
+  <h2 v-bind="iaSold ? 'sold-out':'new'">SoldOut? Movie</h2>
+  <h2 v-bind="[isPromoted && 'promoted' iaSold ? 'sold-out':'new']">SoldOut? Movie</h2>
   </div>
 </template>
 
@@ -25,7 +27,8 @@ export default {
       headingId: 'heading',
       isDisabled: false,
       status: 'danger',
-      isPromoted: true
+      isPromoted: true,
+      isSold: true,
     }
   }
   
