@@ -4,7 +4,7 @@
   <div> {{name}} </div>
   <div v-text="name"></div>
   <div v-html="type"></div>
-  <h2 v-bind:id="headingId">Heading</h2>
+  <h2 :id="headingId">Heading</h2>
   <button v-bind:disabled="isDisabled">Bind</button>
   <h2 class="underline">under line Text</h2>
   <h2 v-bind="status">Status</h2>
