@@ -6,6 +6,9 @@
   <div v-html="type"></div>
   <h2 v-bind:id="headingId">Heading</h2>
   <button v-bind:disabled="isDisabled">Bind</button>
+  <h2 class="underline">under line Text</h2>
+  <h2 v-bind="status">Status</h2>
+  <h2 v-bind="isPromoted && 'promoted'">Promoted Movie</h2>
   </div>
 </template>
 
@@ -21,6 +24,8 @@ export default {
       type:"<b>paragraph type is text</b>",
       headingId: 'heading',
       isDisabled: false,
+      status: 'danger',
+      isPromoted: true
     }
   }
   
@@ -35,5 +40,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.underline {
+text-decoration:underline;
 }
 </style>
