@@ -1,13 +1,13 @@
 <template>
-<div>       
-    <h2 v-for="(name,index) in names" :key="name">{{index}} {{ name }}</h2>
-    <h2 v-for="name in fullNames" :key="name.first">{{name.first}} {{name.last}}</h2>
-    <div v-for="actor in actors" :key="actor.name">
-    <h2>{{actor.name}}</h2>
-    <h3 v-for="movie in actor.movies" :key="movie">{{movie}}</h3>
+  <div>
+    <div v-for="name in names" :key="name">
+      <h2>{{ name }}</h2>
+      <input placeholder="last name" />
+      <hr>
     </div>
-    <h6 v-for="(value, key, index) in myInfo" :key="value">{{value}} ---{{key}}---- {{index}}</h6>
-</div>
+
+    <button @click="shuffle">shuffle</button>
+  </div>
 </template>
 
 <script>
@@ -17,24 +17,15 @@ export default {
   data(){
     return{     
       names:["a","b","c"],
-      fullNames:[
-          {first: 'ahmad', last: 'malik'},
-          {first: 'ahmad', last: 'malik'},
-          {first: 'ahmad', last: 'malik'},
-      ],
-      actors:[
-              {
-              name:'ahmad actor',
-              movies:['ali movie','hamza movie']
-              }
-      ],
-      myInfo: {
-      name: 'ahmad',
-      code: 'vue 3',
-      youtube: 'vishwas',
-      }
+      
     }
-  }
+  },
+  methods: {
+    shuffle(){
+    console.log(this.names);
+    //this.names = _.shuffle(this.names);
+    }
+  },
   
 }
 </script>
