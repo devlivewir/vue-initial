@@ -27,10 +27,11 @@
         <h2 v-if="num===0">The Number is  Zero</h2>
         <h2 v-else>The Number Is not Zero</h2>
         <div v-if="display">
-        <h2>Ahmad</h2>
-        <h2>Ahmad 1</h2>
-        <h2>Ahmad 2</h2>
+            <h2>Ahmad</h2>
+            <h2>Ahmad 1</h2>
+            <h2>Ahmad 2</h2>
         </div>
+        <h2 v-show="showElement">v show Element</h2>
         
   </div>
 </template>
@@ -61,6 +62,7 @@ export default {
       },
       num:5,
       display:true,
+      showElement: false,
     }
   }
   
