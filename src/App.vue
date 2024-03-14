@@ -22,6 +22,10 @@
         }">sytle in v binding</h2>
 
         <h2  v-bind:style="[baseStyleObject,successStyleObject]">Success</h2>
+        
+        
+        <h2 v-if="num===0">The Number is  Zero</h2>
+        <h2 v-else>The Number Is not Zero</h2>
   </div>
 </template>
 
@@ -48,7 +52,8 @@ export default {
       baseStyleObject:{
       fontZise: '50px',
       padding: '20px',
-      }
+      },
+      num:5,
     }
   }
   
