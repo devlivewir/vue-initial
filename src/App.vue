@@ -7,6 +7,13 @@
       <h6>Add method = {{ add(40, 50, 60) }}</h6>
       <h6>Add method = {{ add(70, 80, 90) }}</h6>
       <h6>Add * {{ mult(300) }}</h6>
+      <div>
+        <button v-on:click="name = 'Bat Man'">Change the Name</button>
+      </div>
+      <h2>{{ count }}</h2>
+
+      <button v-on:click="count +=  1">Increment</button>
+      <button v-on:click="count -=  1">Decrement</button>
     </template>
   </div>
 </template>
@@ -18,6 +25,8 @@ export default {
   data() {
     return {
       baseMultiplyer: 5,
+      name: "alic",
+      count: 0,
 
     }
   },
