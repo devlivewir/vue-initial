@@ -14,7 +14,7 @@
 
         <div>
           <label for="summary">Summary</label>
-          <textarea id="summary" v-model="formValues.summary"/>
+          <textarea id="summary" v-model="formValues.summary" />
         </div>
 
         <div>
@@ -34,9 +34,15 @@
             <option value="India">India</option>
           </select>
         </div>
+
+        <div>
+          <input type="checkbox" id="remoteWork" v-model="formValues.remoteWork">
+          <label for="remoteWork">Remote Work</label>
+        </div>
       </form>
     </template>
   </div>
+
 </template>
 
 <script>
@@ -47,9 +53,10 @@ export default {
     return {
       formValues: {
         name: '',
-        'summary':'',
-        'country':'',
-        'jobLocation':[]
+        'summary': '',
+        'country': '',
+        'jobLocation': [],
+        'remoteWork': false
       }
     }
   }
