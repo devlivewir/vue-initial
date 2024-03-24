@@ -6,10 +6,10 @@
           {{ JSON.stringify(formValues, null, 2) }}
         </pre>
       </div>
-      <form action="">
+      <form action="" @submit.prevent="submitForm">
         <div>
           <label for="name">Name</label>
-          <input type="text" id="name" v-model="formValues.name">
+          <input type="text" id="name" v-model.trim.lazy="formValues.name">
         </div>
 
         <div>
@@ -39,6 +39,14 @@
           <input type="checkbox" id="remoteWork" v-model="formValues.remoteWork">
           <label for="remoteWork">Remote Work</label>
         </div>
+
+        <div>
+          <input type="number" id="age" v-model.number="formValues.age">
+          <label for="remoteWork">Age</label>
+        </div>
+        <div>
+          <button>Submit</button>
+        </div>
       </form>
     </template>
   </div>
@@ -56,10 +64,17 @@ export default {
         'summary': '',
         'country': '',
         'jobLocation': [],
-        'remoteWork': false
+        'remoteWork': false,
+        age: null,
       }
     }
-  }
+  },
+  methods: {
+    submitForm() {
+      console.log('button submitted...');
+    }
+
+  },
 }
 </script>
 <style>
