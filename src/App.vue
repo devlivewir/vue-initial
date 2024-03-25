@@ -1,53 +1,9 @@
 <template>
   <div>
     <template>
-      <div>
-        <pre>
-          {{ JSON.stringify(formValues, null, 2) }}
-        </pre>
-      </div>
-      <form action="" @submit.prevent="submitForm">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" v-model.trim.lazy="formValues.name">
-        </div>
-
-        <div>
-          <label for="summary">Summary</label>
-          <textarea id="summary" v-model="formValues.summary" />
-        </div>
-
-        <div>
-          <label for="country">Country</label>
-          <select name="" id="country" v-model="formValues.country">
-            <option value="">Select Country</option>
-            <option value="Pakistan">Pakistan</option>
-            <option value="India">India</option>
-          </select>
-        </div>
-
-        <div>
-          <label for="job-location">Job Location</label>
-          <select name="" id="job-location" multiple v-model="formValues.jobLocation">
-            <option value="">Select Country</option>
-            <option value="Pakistan">Pakistan</option>
-            <option value="India">India</option>
-          </select>
-        </div>
-
-        <div>
-          <input type="checkbox" id="remoteWork" v-model="formValues.remoteWork">
-          <label for="remoteWork">Remote Work</label>
-        </div>
-
-        <div>
-          <input type="number" id="age" v-model.number="formValues.age">
-          <label for="remoteWork">Age</label>
-        </div>
-        <div>
-          <button>Submit</button>
-        </div>
-      </form>
+      <h2>FullName - {{ firstName }} {{ lastName }}</h2>
+      <h2>Computed FullName - {{ FullName }}</h2>
+      <h2>Total - {{ items.reduce((total, curr) => (total = total + curr.price), 0) }}</h2>
     </template>
   </div>
 
@@ -59,22 +15,34 @@ export default {
   name: 'App',
   data() {
     return {
-      formValues: {
-        name: '',
-        'summary': '',
-        'country': '',
-        'jobLocation': [],
-        'remoteWork': false,
-        age: null,
-      }
+      firstName: "Hafiz",
+      lastName: "Ahmad",
+      items: [
+        {
+          id: 1,
+          title: 'TV',
+          price: 200
+        },
+        {
+          id: 2,
+          title: 'Watch',
+          price: 150
+        },
+        {
+          id: 3,
+          title: 'Screen',
+          price: 170
+        },
+      ]
     }
   },
   methods: {
-    submitForm() {
-      console.log('button submitted...');
-    }
-
   },
+  computed: {
+    FullName() {
+      return `${this.firstName} ${this.lastName}`
+    }
+  }
 }
 </script>
 <style>
