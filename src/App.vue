@@ -3,7 +3,8 @@
     <template>
       <h2>FullName - {{ firstName }} {{ lastName }}</h2>
       <h2>Computed FullName - {{ FullName }}</h2>
-      <h2>Total - {{ items.reduce((total, curr) => (total = total + curr.price), 0) }}</h2>
+      <h2>Total -{{ items.reduce((total, curr) => (total = total + curr.price), 0) }} </h2>
+      <h2>with total computed method - {{ total }} </h2>
     </template>
   </div>
 
@@ -41,7 +42,11 @@ export default {
   computed: {
     FullName() {
       return `${this.firstName} ${this.lastName}`
+    },
+    total() {
+      return this.items.reduce((total, curr) => (total = total + curr.price), 0)
     }
+
   }
 }
 </script>
