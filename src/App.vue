@@ -1,15 +1,27 @@
 <template>
-  <Greet />
+  <div>
+    <Greet name="bruce" heroName="supper" />
+    <Greet name="alli" heroName="dupper" />
+    <Greet name="ahi" heroName="happer" />
+    <Greet :name="name" :heroName="channel" />
+  </div>
+
 </template>
 
 <script>
 import Greet from './components/Greets.vue'
 export default {
   name: 'App',
-  components:{
+  components: {
     Greet,
-  }
-  
+  },
+  data() {
+    return {
+      name: 'Ali Name',
+      channel:'ahmad video'
+    }
+  },
+
 }
 </script>
 
