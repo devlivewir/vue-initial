@@ -7,6 +7,8 @@
 
     <Artical :likes="50" :isBoolean="true" />
     <ComponentC />
+    <button @click="showPopup = true">Show Popup</button>
+    <Popup v-show="showPopup" @close="showPopup == false" />
 
   </div>
 
@@ -16,17 +18,21 @@
 import Greet from './components/Greets.vue'
 import Artical from './components/Artical.vue'
 import ComponentC from './components/ComponentC.vue'
+import Popup from './components/Popup.vue'
+
 export default {
   name: 'App',
   components: {
     Greet,
     Artical,
-    ComponentC
+    ComponentC,
+    Popup
   },
   data() {
     return {
       name: 'Ali Name',
-      channel: 'ahmad video'
+      channel: 'ahmad video',
+      showPopup: false,
     }
   },
   provide() {
