@@ -29,8 +29,10 @@ export default {
       channel: 'ahmad video'
     }
   },
-  provide: {
-    username: 'Ahmad'
+  provide() {
+    return {
+      username: this.name
+    }
 
   }
 
