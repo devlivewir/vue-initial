@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import ComponentF from './ComponentF';
+import ComponentF from './ComponentF.vue';
 export default {
-    name: 'ComponentF',
+    name: 'ComponentE',
     components: {
         ComponentF
     }

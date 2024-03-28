@@ -4,8 +4,10 @@
     <Greet name="alli" heroName="dupper" />
     <Greet name="ahi" heroName="happer" />
     <Greet :name="name" :heroName="channel" />
-    
-    <Artical  :likes="50" :isBoolean="true"/>
+
+    <Artical :likes="50" :isBoolean="true" />
+    <ComponentC />
+
   </div>
 
 </template>
@@ -13,18 +15,24 @@
 <script>
 import Greet from './components/Greets.vue'
 import Artical from './components/Artical.vue'
+import ComponentC from './components/ComponentC.vue'
 export default {
   name: 'App',
   components: {
     Greet,
     Artical,
+    ComponentC
   },
   data() {
     return {
       name: 'Ali Name',
-      channel:'ahmad video'
+      channel: 'ahmad video'
     }
   },
+  provide: {
+    username: 'Ahmad'
+
+  }
 
 }
 </script>
